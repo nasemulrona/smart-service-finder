@@ -1,0 +1,509 @@
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Emergency Banner */
+.emergencyBanner {
+  background-color: #a82821;
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emergencyBanner button {
+  background: white;
+  color: #8b3e3a;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #0066ff, #00c6ff);
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Navigation Links */
+.navRight {
+  margin-left: auto;
+}
+
+.navRight ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 500;
+  align-items: center;
+}
+
+/* Navigation Link Hover Effects */
+.navRight ul li {
+  position: relative;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navRight ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffb703;
+  transition: width 0.3s ease;
+}
+
+.navRight ul li:hover {
+  color: #ffb703;
+}
+
+.navRight ul li:hover::after {
+  width: 100%;
+}
+
+/* Find Services Button */
+.findServicesBtn {
+  position: relative;
+}
+
+.findServicesBtn::after {
+  background-color: white;
+}
+
+.findServicesBtn:hover {
+  color: white !important;
+}
+
+/* Find Services Dropdown */
+.findServicesDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 300px;
+  z-index: 100;
+  margin-top: 0.5rem;
+}
+
+.findServicesDropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.findServicesDropdown li {
+  background: #e0f7fa;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-weight: 500;
+  color: #00796b;
+  border: 1px solid #b2ebf2;
+}
+
+.findServicesDropdown li:hover {
+  background: #b2ebf2;
+  transform: scale(1.03);
+}
+
+/* Mobile Menu */
+.menuIcon {
+  cursor: pointer;
+  display: none;
+}
+
+.menuIcon .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 200px;
+  z-index: 100;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.dropdown li {
+  position: relative;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+  padding-left: 1rem;
+}
+
+.dropdown li::before {
+  content: '→';
+  position: absolute;
+  left: -10px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.dropdown li:hover {
+  padding-left: 20px;
+  color: #0066ff;
+}
+
+.dropdown li:hover::before {
+  opacity: 1;
+  left: 5px;
+}
+
+.dropdown li:last-child {
+  border-bottom: none;
+}
+
+.dropdown li:hover {
+  background: #e0f7fa;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0066ff, #00c6ff);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.searchBar input {
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  width: 250px;
+}
+
+.searchBar button {
+  background: #ffb703;
+  color: #333;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.searchBar button:hover {
+  background: #fca311;
+}
+
+/* Promo Banner */
+.promoBanner {
+  background-color: #ffb703;
+  color: #333;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* About Section */
+.aboutSection {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.serviceCard {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+}
+
+.liveBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #ff3b30;
+}
+
+.serviceImage {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.serviceCard h3 {
+  color: #0066ff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.rating {
+  color: #ffb703;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.serviceCard p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.bookButton {
+  background: #0066ff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+  margin-top: auto;
+  align-self: center; 
+}
+
+.bookButton:hover {
+  background: #0047b3;
+}
+
+/* Steps Section */
+.stepsSection {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: linear-gradient(to right, #0066ff, #00c6ff);
+  color: white;
+}
+
+.stepsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stepBox {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.stepNumber {
+  background: white;
+  color: #0066ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faqItem {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faqItem h3 {
+  color: #0066ff;
+  margin-bottom: 0.5rem;
+}
+
+/* About Us */
+.aboutUs {
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutUs p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  padding: 3rem 1rem 1rem;
+}
+
+.footerColumns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerColumn h3 {
+  margin-bottom: 1rem;
+  color: #ffb703;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.footerColumn li:hover {
+  text-decoration: underline;
+}
+
+.footerButton {
+  background: #ffb703;
+  color: #333;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.footerButton:hover {
+  background: #fca311;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #555;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .navRight ul {
+    display: none;
+  }
+
+  .findServicesDropdown {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .findServicesDropdown ul {
+    grid-template-columns: 1fr;
+  }
+
+  .stepsContainer, .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .emergencyBanner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
